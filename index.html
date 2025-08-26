@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Portal da Filosofia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portal da Filosofia - Reflexões, pensamentos e história da filosofia em um só lugar.">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal da Filosofia - Reflexões, pensamentos e história da filosofia." />
+
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -20,75 +20,71 @@
   }
   </script>
 
-  <!-- Bootstrap Icons CDN -->
+  <!-- Bootstrap Icons (apenas ícones) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <!-- CSS fixo para cabeçalho e rodapé -->
-  <link rel="stylesheet" href="style2.css">
-  <!-- Tailwind CSS para conteúdo principal -->
+
+  <!-- Tailwind (apenas para main) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS fixo para cabeçalho e rodapé (style2.css) - carregado por último para garantir prioridade -->
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
   <!-- ================= CABEÇALHO ================= -->
   <header class="site-header">
-    <div class="container">
-      <div class="logo">
-        <!-- Logo será inserido aqui futuramente -->
-        <h1>Portal da Filosofia</h1>
-      </div>
+    <div class="header-container">
+      <!-- Logo (vou adicionar depois) -->
+      <a class="logo" href="https://omundoesuashistorias.com.br" aria-label="Portal da Filosofia - Início">
+        <!-- Quando adicionar a imagem: coloque o caminho em src e remova display:none via CSS -->
+        <img src="" alt="Logo Portal da Filosofia" class="logo-img" style="display:none;">
+        <span>Portal da Filosofia</span>
+      </a>
 
-      <!-- Botão menu mobile -->
-      <button class="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
-
-      <!-- Menu de navegação -->
-      <nav class="site-nav">
+      <!-- Menu Desktop -->
+      <nav class="menu-desktop" aria-label="Menu principal">
         <ul>
-          <li><a href="https://omundoesuashistorias.com.br">Home</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="https://omundoesuashistorias.com.br" class="active">Home</a></li>
+          <li><a href="/contato">Contato</a></li>
+          <li><a href="/sobre">Sobre</a></li>
         </ul>
       </nav>
+
+      <!-- Botão menu mobile (hamburguer) -->
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+        <!-- ícone hamburguer -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" role="img">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
+
+    <!-- Menu Mobile (toggle via JS) -->
+    <nav id="mobile-menu" class="menu-mobile" aria-hidden="true">
+      <ul>
+        <li><a href="https://omundoesuashistorias.com.br">Home</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <!-- ================= CONTEÚDO PRINCIPAL (usa Tailwind) ================= -->
   <main>
-    <!-- Aviso de página em construção -->
-    <section class="flex items-center justify-center min-h-[60vh] bg-gray-100 text-center px-4">
-      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-lg">
-        <h2 class="text-2xl md:text-3xl font-bold text-red-800 mb-4">🚧 Página em Construção 🚧</h2>
+    <!-- Section: Página em construção (Tailwind) -->
+    <section class="min-h-[60vh] flex items-center justify-center px-4 bg-gray-50">
+      <div class="max-w-2xl bg-white rounded-2xl shadow-lg p-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-red-800 mb-4">🚧 Página em Construção</h2>
         <p class="text-gray-700 text-lg">
-          Estamos preparando um espaço cheio de ideias, reflexões e filosofia para você.  
-          Volte em breve para explorar!
+          Estamos preparando um espaço com reflexões, textos e conteúdo sobre filosofia.
+          Em breve tudo estará no ar — enquanto isso, acompanhe nossas redes.
         </p>
       </div>
     </section>
   </main>
 
   <!-- ================= RODAPÉ ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Portal da Filosofia. Todos os direitos reservados.</p>
-      <div class="social-icons">
-        <a href="https://facebook.com/omundoesuashistorias" target="_blank" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://instagram.com/omundoesuashistorias" target="_blank" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ================= SCRIPT MENU MOBILE ================= -->
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.site-nav');
-
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
-</body>
-  </html>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- links do rodapé -->
+      <nav aria-label="Links do rodapé">
+        <a href="https://omundoesuashistorias.com
