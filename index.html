@@ -26,16 +26,15 @@
   <!-- Tailwind (apenas para main) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- CSS fixo para cabeçalho e rodapé (style2.css) - carregado por último para garantir prioridade -->
+  <!-- CSS fixo para cabeçalho e rodapé -->
   <link rel="stylesheet" href="style2.css">
 </head>
 <body>
   <!-- ================= CABEÇALHO ================= -->
   <header class="site-header">
     <div class="header-container">
-      <!-- Logo (vou adicionar depois) -->
+      <!-- Logo -->
       <a class="logo" href="https://omundoesuashistorias.com.br" aria-label="Portal da Filosofia - Início">
-        <!-- Quando adicionar a imagem: coloque o caminho em src e remova display:none via CSS -->
         <img src="" alt="Logo Portal da Filosofia" class="logo-img" style="display:none;">
         <span>Portal da Filosofia</span>
       </a>
@@ -44,33 +43,33 @@
       <nav class="menu-desktop" aria-label="Menu principal">
         <ul>
           <li><a href="https://omundoesuashistorias.com.br" class="active">Home</a></li>
-          <li><a href="/contato">Contato</a></li>
           <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/artigos">Artigos</a></li>
+          <li><a href="/contato">Contato</a></li>
         </ul>
       </nav>
 
-      <!-- Botão menu mobile (hamburguer) -->
+      <!-- Menu Mobile Toggle -->
       <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
-        <!-- ícone hamburguer -->
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" role="img">
           <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
 
-    <!-- Menu Mobile (toggle via JS) -->
+    <!-- Menu Mobile -->
     <nav id="mobile-menu" class="menu-mobile" aria-hidden="true">
       <ul>
         <li><a href="https://omundoesuashistorias.com.br">Home</a></li>
-        <li><a href="/contato">Contato</a></li>
         <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/artigos">Artigos</a></li>
+        <li><a href="/contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ================= CONTEÚDO PRINCIPAL (usa Tailwind) ================= -->
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
   <main>
-    <!-- Section: Página em construção (Tailwind) -->
     <section class="min-h-[60vh] flex items-center justify-center px-4 bg-gray-50">
       <div class="max-w-2xl bg-white rounded-2xl shadow-lg p-8 text-center">
         <h2 class="text-2xl md:text-3xl font-bold text-red-800 mb-4">🚧 Página em Construção</h2>
@@ -82,18 +81,53 @@
     </section>
   </main>
 
-<footer>
-  <div class="footer-container">
-    <p>&copy; <span id="year"></span> Portal da Filosofia. Todos os direitos reservados.</p>
-    <div class="footer-links">
-      <a href="#">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Artigos</a>
-      <a href="#">Contato</a>
-    </div>
-  </div>
-</footer>
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <!-- Área esquerda: copyright -->
+      <div class="footer-left">
+        <p>&copy; <span id="year"></span> Portal da Filosofia. Todos os direitos reservados.</p>
+      </div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
+      <!-- Área central: links do rodapé -->
+      <div class="footer-center">
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="https://omundoesuashistorias.com.br">Início</a>
+          <a href="/sobre">Sobre</a>
+          <a href="/artigos">Artigos</a>
+          <a href="/contato">Contato</a>
+        </nav>
+      </div>
+
+      <!-- Área direita: redes sociais -->
+      <div class="footer-right">
+        <div class="social-icons" aria-label="Redes sociais">
+          <a href="https://facebook.com/omundoesuashistorias" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="bi bi-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/omundoesuashistorias" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Atualiza ano do copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('show');
+      mobileMenu.setAttribute('aria-hidden', String(isExpanded));
+    });
+  </script>
+</body>
+  </html>
