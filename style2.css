@@ -164,40 +164,14 @@ body {
   color: var(--dourado-claro);
 }
 
-/* ============================= */
-/* FOOTER                        */
-/* ============================= */
-.footer {
-  background-color: var(--bordo);
-  color: var(--dourado);
-  padding: 1.5rem 1rem;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.footer-container {
-  max-width: 72rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-.footer-container nav a {
-  color: var(--dourado);
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 500;
-}
-.footer-container nav a:hover {
-  color: var(--dourado-claro);
-  text-decoration: underline;
-}
-.footer-container p {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: var(--dourado);
-}
+<!-- ====== Rodapé ====== -->
+<footer>
+  <p>&copy; <span id="year"></span> Portal da Filosofia. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 /* ============================= */
 /* RESPONSIVIDADE                */
@@ -217,3 +191,11 @@ body {
     text-align: center;
   }
   }
+/* Rodapé responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  }
+
