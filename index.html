@@ -82,9 +82,12 @@
     </section>
   </main>
 
-  <!-- ================= RODAPÉ ================= -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- links do rodapé -->
-      <nav aria-label="Links do rodapé">
-        <a href="https://omundoesuashistorias.com
+  <!-- ====== Rodapé ====== -->
+<footer>
+  <p>&copy; <span id="year"></span> Portal da Filosofia. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Script para atualizar automaticamente o ano -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
