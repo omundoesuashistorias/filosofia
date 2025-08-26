@@ -198,4 +198,40 @@ body {
     text-align: center;
   }
   }
+<!-- ====== Rodapé (substitua o footer atual por este bloco) ====== -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-container">
+    <!-- Área esquerda: copyright -->
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> Portal da Filosofia. Todos os direitos reservados.</p>
+    </div>
+
+    <!-- Área central: links do rodapé -->
+    <div class="footer-center">
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="https://omundoesuashistorias.com.br">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/artigos">Artigos</a>
+        <a href="/contato">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Área direita: redes sociais -->
+    <div class="footer-right">
+      <div class="social-icons" aria-label="Redes sociais">
+        <a href="https://facebook.com/omundoesuashistorias" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="bi bi-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com/omundoesuashistorias" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="bi bi-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Script para atualizar automaticamente o ano (colocar antes do fechamento do body) -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
