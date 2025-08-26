@@ -1,1 +1,94 @@
-index
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal da Filosofia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal da Filosofia - Reflexões, pensamentos e história da filosofia em um só lugar.">
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Portal da Filosofia",
+    "url": "https://omundoesuashistorias.com.br",
+    "author": {
+      "@type": "Organization",
+      "name": "O Mundo e Suas Histórias"
+    }
+  }
+  </script>
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- CSS fixo para cabeçalho e rodapé -->
+  <link rel="stylesheet" href="style2.css">
+  <!-- Tailwind CSS para conteúdo principal -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <!-- Logo será inserido aqui futuramente -->
+        <h1>Portal da Filosofia</h1>
+      </div>
+
+      <!-- Botão menu mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <!-- Menu de navegação -->
+      <nav class="site-nav">
+        <ul>
+          <li><a href="https://omundoesuashistorias.com.br">Home</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <main>
+    <!-- Aviso de página em construção -->
+    <section class="flex items-center justify-center min-h-[60vh] bg-gray-100 text-center px-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-red-800 mb-4">🚧 Página em Construção 🚧</h2>
+        <p class="text-gray-700 text-lg">
+          Estamos preparando um espaço cheio de ideias, reflexões e filosofia para você.  
+          Volte em breve para explorar!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Portal da Filosofia. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/omundoesuashistorias" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://instagram.com/omundoesuashistorias" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT MENU MOBILE ================= -->
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+  </html>
